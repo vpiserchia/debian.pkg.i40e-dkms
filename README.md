@@ -1,7 +1,7 @@
 # Debianization for the Intel i40e Driver
 
 The repository contains so called DEBIAN directory containing the scripts and configs files needed to package the
-[Intel i40e driver]() server into a DEB package for a Debian distro.
+[Intel i40e driver](https://downloadcenter.intel.com/download/24411/Intel-Network-Adapter-Driver-for-PCIe-40-Gigabit-Ethernet-Network-Connections-Under-Linux-) server into a DEB package for a Debian distro.
 
 Waiting for a debian mantainer to adopt this package, this repository will rely on the original
 binary distribution of the Intel i40e and later versions.
