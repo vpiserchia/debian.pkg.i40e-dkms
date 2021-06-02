@@ -1,12 +1,12 @@
-# Debianization for the Intel I40E Driver
+# Debianization for the Intel i40E Driver
 
 The repository contains so called DEBIAN directory containing the scripts and configs files needed to package the
-[Intel I40E driver]() server into a DEB package for a Debian distro.
+[Intel i40E driver]() server into a DEB package for a Debian distro.
 
 Waiting for a debian mantainer to adopt this package, this repository will rely on the original
-binary distribution of the Intel I40E and later versions.
+binary distribution of the Intel i40E and later versions.
 
-Using this repository, you will be able to have an Intel I40E driver debian package fully working for easy deploys into your clusters.
+Using this repository, you will be able to have an Intel i40E driver debian package fully working for easy deploys into your clusters.
 
 ## Short DEB-packaging HowTo
 
@@ -14,7 +14,7 @@ Using this repository, you will be able to have an Intel I40E driver debian pack
 
 ```deb-automate-build.sh```
 
-## Installing the Intel I40E driver debian packages
+## Installing the Intel i40E driver debian packages
 
 After the build is completed, it's as simple as:
 
