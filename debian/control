@@ -1,0 +1,24 @@
+Source: i40e
+Section: kernel
+Priority: optional
+Maintainer: Vito Piserchia <vpiserchia@gmail.com>
+Build-Depends: debhelper (>= 10), dkms
+Standards-Version: 4.1.2
+Homepage: http://e1000.sourceforge.net
+Vcs-Git: https://github.com/vpiserchia/debian.pkg.i40e-dkms.git
+Vcs-Browser: https://github.com/vpiserchia/debian.pkg.i40e-dkms
+
+Package: i40e-dkms
+Architecture: all
+Depends: ${misc:Depends}
+Provides: i40e
+Description: Kernel module for Intel Ethernet Network Connections - i40e
+ This package includes i40e Linux Base Drivers for Intel Ethernet Network
+ Connections.
+ .
+ - The i40e driver supports devices based on the following controllers:
+  * Intel(R) Ethernet Controller X710
+  * Intel(R) Ethernet Controller XL710
+  * Intel(R) Ethernet Network Connection X722
+  * Intel(R) Ethernet Controller XXV710
+  * Intel(R) Ethernet Controller V710

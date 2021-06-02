@@ -1,0 +1,3 @@
+scripts/dump_tables
+scripts/set_irq_affinity
+scripts/virt_perf_default
