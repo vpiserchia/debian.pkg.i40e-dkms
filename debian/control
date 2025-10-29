@@ -12,11 +12,19 @@ Package: i40e-dkms
 Architecture: all
 Depends: ${misc:Depends}
 Provides: i40e
-Description: Kernel module for Intel Ethernet Network Connections - i40e
+Description: Out of tree Kernel module for Intel Ethernet Network Connections - i40e
+ This is Intel 40GbE Ethernet Controller out of tree i40e driver.
+ .
+ Installation of the i40e-dkms package will disable the in-kernel i40e
+ module. To re-enable them, the i40e-dkms package must be purged.
+ .
+ This package provides the dkms source code for the i40e kernel module.
+ Kernel source or headers are required to compile these modules.
+
  This package includes i40e Linux Base Drivers for Intel Ethernet Network
  Connections.
  .
- - The i40e driver supports devices based on the following controllers:
+ The i40e driver supports devices based on the following controllers:
   * Intel(R) Ethernet Controller X710
   * Intel(R) Ethernet Controller XL710
   * Intel(R) Ethernet Network Connection X722
