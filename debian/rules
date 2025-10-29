@@ -1,14 +1,26 @@
 #!/usr/bin/make -f
 
-#export DH_VERBOSE=1
+export DH_VERBOSE=1
 
 include /usr/share/dpkg/pkg-info.mk
 
+VERSION := $(shell dpkg-parsechangelog | sed -nr '/^Version:/s/Version: (.*:)?(.*)-(.*)/\2/p')
+
 %:
-	dh $@ --with dkms
+	dh $@ --with dkms,quilt
 
 override_dh_install:
-	dh_install src/* usr/src/i40e-$(DEB_VERSION_UPSTREAM)/
+	sed -e "s/%DEB_VERSION_UPSTREAM%/$(DEB_VERSION_UPSTREAM)/g" debian/i40e-dkms.install.in > debian/i40e-dkms.install
+	dh_install src/*.c src/*.h src/Makefile src/common.mk src/kcompat-*.sh usr/src/i40e-$(VERSION)/
+	find debian/i40e-dkms/usr/src -type f -perm -5 -print0 2>/dev/null | xargs -0r chmod a-X
+
+override_dh_auto_clean:
+
+override_dh_auto_build:
+
+override_dh_clean:
+	rm -f debian/i40e-dkms.install debian/i40e-dkms debian/i40e-dkms.dkms.debhelper debian/i40e-dkms.postinst.debhelper debian/i40e-dkms.prerm.debhelper debian/i40e-dkms.prerm.debhelper debian/i40e-dkms.debhelper.log debian/debhelper-build-stamp debian/files debian/i40e-dkms.substvars
+	dh_clean
 
 override_dh_dkms:
 	dh_dkms -V $(DEB_VERSION_UPSTREAM)

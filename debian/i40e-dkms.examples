@@ -1,3 +1,5 @@
+scripts/check_aux_bus  
 scripts/dump_tables
 scripts/set_irq_affinity
 scripts/virt_perf_default
+

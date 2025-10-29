@@ -1,0 +1,3 @@
+# See i40e(7) for more information on available parameters.
+
+#options i40e l4mode=2

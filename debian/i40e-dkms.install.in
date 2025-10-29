@@ -1,0 +1,2 @@
+debian/i40e-dkms.conf etc/depmod.d/
+src/* usr/src/i40e-%DEB_VERSION_UPSTREAM%
