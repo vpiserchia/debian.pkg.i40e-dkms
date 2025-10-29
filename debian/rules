@@ -15,7 +15,7 @@ override_dh_install:
 	find debian/i40e-dkms/usr/src -type f -perm -5 -print0 2>/dev/null | xargs -0r chmod a-X
 
 override_dh_clean:
-	rm -f debian/i40e-dkms.install debian/i40e-dkms debian/i40e-dkms.dkms.debhelper debian/i40e-dkms.postinst.debhelper debian/i40e-dkms.prerm.debhelper debian/i40e-dkms.prerm.debhelper debian/i40e-dkms.debhelper.log debian/debhelper-build-stamp debian/files debian/i40e-dkms.substvars debian/i40e-dkms.lintian-overrides
+	rm -f debian/i40e-dkms.install debian/i40e-dkms debian/i40e-dkms.dkms.debhelper debian/i40e-dkms.postinst.debhelper debian/i40e-dkms.prerm.debhelper debian/i40e-dkms.prerm.debhelper debian/i40e-dkms.debhelper.log debian/debhelper-build-stamp debian/files debian/i40e-dkms.substvars
 	dh_clean
 
 override_dh_dkms:
