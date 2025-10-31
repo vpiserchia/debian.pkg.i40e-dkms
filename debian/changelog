@@ -4,10 +4,10 @@ i40e (2.28.10-1) unstable; urgency=medium
   * Add modprobe configuration
   * Use Github hosted projects
 
- -- Vito Piserchia <vpiserchia@gmail.com>  Wed, 28 Oct 2025 22:19:27 +0100
+ -- Vito Piserchia <vpiserchia@users.noreply.github.com>  Wed, 28 Oct 2025 22:19:27 +0100
 
 i40e (2.15.9-1) unstable; urgency=medium
 
   * Initial release.
 
- -- Vito Piserchia <vpiserchia@gmail.com>  Wed, 02 Jun 2021 08:23:01 +0300
+ -- Vito Piserchia <vpiserchia@users.noreply.github.com>  Wed, 02 Jun 2021 08:23:01 +0300
